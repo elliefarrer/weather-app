@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const Dotenv = require('dotenv-webpack');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpack = new HtmlWebpackPlugin({
@@ -31,9 +32,12 @@ module.exports = {
             { test: /\.scss$/, loader: ['style-loader', 'scss-loader'] },
         ],
     },
+    node: {
+        fs: 'empty',
+    },
     devServer: {
         historyApiFallback: true,
         hot: true,
     },
-    plugins: [HotModuleReplacement, HtmlWebpack],
+    plugins: [HotModuleReplacement, HtmlWebpack, new Dotenv()],
 };
