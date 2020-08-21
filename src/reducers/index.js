@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
+import PostcodeReducer from './postcodes';
 
 export default combineReducers({
-    // Stick reducers in here
+    postcode: PostcodeReducer,
 });
