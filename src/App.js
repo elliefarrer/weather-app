@@ -1,6 +1,5 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { Header, Footer, Home } from './containers';
 import store from './store';
@@ -10,9 +9,7 @@ const App = () => (
         <Header />
 
         <main id="content">
-            <Switch>
-                <Route exact path="/" component={Home} />
-            </Switch>
+            <Home />
         </main>
 
         <Footer />
@@ -21,9 +18,7 @@ const App = () => (
 
 render(
     <Provider store={store}>
-        <BrowserRouter>
-            <App />
-        </BrowserRouter>
+        <App />
     </Provider>,
     document.querySelector('#root')
 );
