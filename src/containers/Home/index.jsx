@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { getPostcodesData } from '../../actions/postcodesActions';
 import { getWeatherData } from '../../actions/weatherActions';
 import * as selectors from '../../selectors';
-import { Form } from './components';
+import { Form, Results } from './components';
 
 const Home = ({
     getPostcodesData,
@@ -27,7 +27,7 @@ const Home = ({
             />
 
             {showWeatherModal &&
-                <p>This works</p>
+                <Results />
             }
         </>
     );
