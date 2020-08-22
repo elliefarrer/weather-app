@@ -7,7 +7,10 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage --colors"
   },
   "dependencies": {
     "@babel/runtime": "^7.11.2",
@@ -32,7 +35,10 @@
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
     "css-loader": "^4.2.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.3",
     "html-webpack-plugin": "^4.3.0",
+    "jest": "^26.4.2",
     "sass-loader": "^9.0.3",
     "style-loader": "^1.2.1",
     "webpack-cli": "^3.3.12",
