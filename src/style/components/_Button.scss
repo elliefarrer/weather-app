@@ -1,0 +1,30 @@
+.Button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 20px;
+    font-family: 'Scope One', Georgia, Times, serif;
+    font-weight: 800;
+    color: $colors-bgPrimary;
+    background: $colors-accentPrimary;
+    border: 0.1rem solid $colors-accentPrimary;
+    border-radius: 50px;
+
+    &:hover, &:focus {
+        background: lighten($colors-accentPrimary, 5%); 
+        border-color: lighten($colors-accentPrimary, 5%); 
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:disabled {
+        background: $colors-bgPrimary;
+        color: $colors-greyLight;
+        border-color: $colors-greyLight;
+    }
+}

@@ -1,0 +1,21 @@
+.Container {
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media(min-width: 769px) {
+        padding-left: 0;
+        padding-right: 0;
+        width: 730px;
+    }
+
+    @media(min-width: $breakpoints-lg) {
+        width: 900px;
+    }
+
+    @media (min-width: $breakpoints-xl) {
+        width: 1100px;
+    }
+}

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { getPostcodesData } from '../../actions/postcodesActions';
 import { getWeatherData } from '../../actions/weatherActions';
 import * as selectors from '../../selectors';
+import { Container } from '../../components';
 import { Form, Results } from './components';
 
 const Home = ({
@@ -14,22 +15,26 @@ const Home = ({
 }) => {
     const [showWeatherModal, setShowWeatherModal] = useState(false);
     return (
-        <>
-            <h1>Home</h1>
+        <div className="Home">
+            <Container>
+                <div className="Home__inner">
+                    <h1 className="Home__hero">Welcome to Whether Weather</h1>
 
-            <Form
-                getPostcodesData={getPostcodesData}
-                getWeatherData={getWeatherData}
-                postcode={postcode}
-                lat={lat}
-                lon={lon}
-                setShowWeatherModal={setShowWeatherModal}
-            />
+                    <Form
+                        getPostcodesData={getPostcodesData}
+                        getWeatherData={getWeatherData}
+                        postcode={postcode}
+                        lat={lat}
+                        lon={lon}
+                        setShowWeatherModal={setShowWeatherModal}
+                    />
+                </div>
 
-            {showWeatherModal &&
-                <Results />
-            }
-        </>
+                {showWeatherModal &&
+                    <Results />
+                }
+            </Container>
+        </div>
     );
 }
 

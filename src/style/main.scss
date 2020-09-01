@@ -1,0 +1,14 @@
+@import './helpers/variables';
+@import './components/all';
+@import './pages/Home';
+
+body {
+    color: $colors-textPrimary;
+    font-family: 'Scope One', Georgia, Times, serif;
+    font-size: 18px;
+    background: $colors-bgPrimary;
+}
+
+main {
+    min-height: 88vh;
+}

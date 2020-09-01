@@ -3,6 +3,8 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { Header, Footer, Home } from './containers';
 import store from './store';
+import './style/reset.css';
+import './style/main.scss';
 
 const App = () => (
     <div>

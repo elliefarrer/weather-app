@@ -23,9 +23,9 @@ const Form = ({
         }
     }, [lat, lon]);
     return (
-        <form onSubmit={handleSubmit(submit)}>
-            <div>
-                <label htmlFor="postcode">Postcode</label>
+        <form onSubmit={handleSubmit(submit)} className="Form">
+            <div className="Form__input-container">
+                <label htmlFor="postcode" className={postcode ? 'Label--populated' : 'Label'}>Postcode</label>
                 <Field
                     name="postcode"
                     type="text"
@@ -34,8 +34,8 @@ const Form = ({
                 />
             </div>
 
-            <div>
-                <button type="submit" disabled={pristine || submitting}>
+            <div className="Form__button-container">
+                <button className="Button" type="submit" disabled={pristine || submitting}>
                     {submitting ? 'Searching...' : 'Search'}
                 </button>
             </div>

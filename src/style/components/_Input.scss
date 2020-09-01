@@ -1,0 +1,35 @@
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+    position: relative;
+    width: calc(100% - 2rem);
+    padding: 1rem;
+    font-family: 'Scope One', Georgia, Times, serif;
+    font-size: 18px;
+    color: $colors-textPrimary;
+    border: 0.1rem solid $colors-accentPrimary;
+    border-radius: 60px;
+    background: $colors-bgPrimary;
+
+    &::placeholder {
+        font-family: 'Scope One', Georgia, Times, serif;
+        color: $colors-greyLight;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+        -webkit-text-fill-color: $colors-textPrimary;
+        background-color: $colors-bgPrimary;
+        box-shadow: $colors-bgPrimary 0px 0px 0px 50px inset;
+        transition: background-color 5000s ease-in-out 0s;
+    }
+
+    &:focus {
+        outline: none;
+        border-color: $colors-textPrimary;
+    }
+}
+
