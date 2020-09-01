@@ -5,8 +5,8 @@ import { Modal } from '../../../../components';
 import * as selectors from '../../../../selectors';
 import { formatCelsiusTemp, formatHumidity } from '../../../../formatters';
 
-const Results = ({ adminDistrict, currently }) => (
-    <Modal>
+const Results = ({ adminDistrict, currently, onClose }) => (
+    <Modal onClose={onClose}>
         <h1 className="Results__title">{adminDistrict}</h1>
 
         {currently ? (

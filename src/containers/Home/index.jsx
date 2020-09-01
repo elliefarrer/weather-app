@@ -31,7 +31,7 @@ const Home = ({
                 </div>
 
                 {showWeatherModal &&
-                    <Results />
+                    <Results onClose={() => setShowWeatherModal(false)} />
                 }
             </Container>
         </div>

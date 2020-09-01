@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Modal = ({ children }) => (
-    <div className="ModalMask">
+const Modal = ({ children, onClose }) => (
+    <div className="ModalMask" onClick={onClose}>
         <div className="Modal">
             {children}
         </div>
