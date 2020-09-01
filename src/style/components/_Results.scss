@@ -1,0 +1,26 @@
+.Results {
+    &__title {
+        margin-bottom: 1.75rem;
+        text-align: center;
+        font-size: 32px;
+    }
+
+    &__subtitle {
+        margin-bottom: 1rem;
+        font-size: 26px;
+
+        small {
+            font-size: 18px;
+        }
+    }
+
+    &__table {
+        width: 100%;
+        border: 0.1rem solid $colors-textPrimary;
+
+        td {
+            padding: 0.5rem;
+            border: 0.1rem solid $colors-textPrimary;
+        }
+    }
+}

@@ -1,8 +1,10 @@
 import React from 'react';
 
 const Modal = ({ children }) => (
-    <div>
-        {children}
+    <div className="ModalMask">
+        <div className="Modal">
+            {children}
+        </div>
     </div>
 )
 
