@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Field, reduxForm } from 'redux-form';
+import PropTypes from 'prop-types';
 
 const Form = ({
     getWeatherData,
@@ -41,6 +42,18 @@ const Form = ({
             </div>
         </form>
     );
+}
+
+Form.propTypes = {
+    getPostcodesData: PropTypes.func.isRequired,
+    getWeatherData: PropTypes.func.isRequired,
+    postcode: PropTypes.string,
+    lat: PropTypes.number,
+    lon: PropTypes.number,
+    setShowWeatherModal: PropTypes.func.isRequired,
+    submitting: PropTypes.bool.isRequired,
+    pristine: PropTypes.bool.isRequired,
+    handleSubmit: PropTypes.func.isRequired
 }
 
 export default reduxForm({

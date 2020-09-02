@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import moment from 'moment';
+import PropTypes from 'prop-types';
 import { Modal } from '../../../../components';
 import * as selectors from '../../../../selectors';
 import { formatCelsiusTemp, formatHumidity } from '../../../../formatters';
@@ -64,6 +65,12 @@ const Results = ({ adminDistrict, currently, onClose }) => (
         )}
     </Modal>
 );
+
+Results.propTypes = {
+    adminDistrict: PropTypes.string,
+    currently: PropTypes.object,
+    onClose: PropTypes.func.isRequired
+}
 
 const mapStateToProps = state => ({
     adminDistrict: selectors.adminDistrictSelector(state),
